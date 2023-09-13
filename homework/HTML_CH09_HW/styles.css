@@ -7,7 +7,7 @@
     align-items: center;*/
    /* flex-wrap: wrap;
     justify-content: space-around;
-    align-items: flex-end;
+    align-items: flex-end; --made aligning items from extrmely hard to very easy with a line of code.
     align-content: flex-end; /*space-between*/
 }
 

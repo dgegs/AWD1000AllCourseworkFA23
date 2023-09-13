@@ -1,12 +1,14 @@
 flexbox container you can style
 
+properties
+
 the flexability and sizing without having to layout the 
 layout your elements across the different rows and columns as well as aligning them in the layout
 
 
 flexbox-items - grow and shrink
 
-don't use align-content/ Use justify-content and align-items = aligns it on the main and cross axis. 
+don't use align-content much. Same properties as justify-content/ Use justify-content and align-items = aligns it on the main and cross axis. 
 
 flex-directions: row/column;
 
@@ -46,7 +48,7 @@ flexbox item 1 {
 order:3
 }
 flexbox item 2 {
-	2.flex-grow: 1; -- flex grow takes extra space and grows the item to the size of the leftover space. 
+	2.flex-grow:1/ 2; -- flex grow takes extra space and grows the item to the size of the leftover space. 
 	flex-basis: 0; -- flex-basis sets the flex-item to zero px.
 	align-self: center, flex-start, flex-end;
 	order:1
