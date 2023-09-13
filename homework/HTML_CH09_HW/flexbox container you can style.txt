@@ -1,0 +1,57 @@
+flexbox container you can style
+
+the flexability and sizing without having to layout the 
+layout your elements across the different rows and columns as well as aligning them in the layout
+
+
+flexbox-items - grow and shrink
+
+don't use align-content/ Use justify-content and align-items = aligns it on the main and cross axis. 
+
+flex-directions: row/column;
+
+container is only laying spacing between items and positioning of items inside of the container.
+
+flex items properties are meant to overide the position and layout properites or apply differnt flexible sizing
+
+.flexbox-container{
+  display: flex;
+flex-wrap: wrap;
+
+1. justify-content: center;
+2. justify-content: space-between;
+3. justify-content: space-around;
+
+1. align-items: stretch;  -- default
+2. align-times: flex-start;
+3. align-itmes: flex-end; 
+4. align-items: center;
+
+1.align-content: center; - stay away from
+2.align-content: flex-start; - stay away from
+3.align-content: flex-end; - stay away from
+
+clear out container but display: flex.
+
+flex-direction: column;
+
+1.justify-content: center; add height: 800px; centered vertically not horizonitally. 
+
+1. align-items: center; center of page. 
+
+go back to display flex;
+
+flexbox item 1 {
+	flex-shrink: 0;
+order:3
+}
+flexbox item 2 {
+	2.flex-grow: 1; -- flex grow takes extra space and grows the item to the size of the leftover space. 
+	flex-basis: 0; -- flex-basis sets the flex-item to zero px.
+	align-self: center, flex-start, flex-end;
+	order:1
+}
+flexbox item 3 {
+	1.flex-grow: 1;
+	flex-basis;
+}
