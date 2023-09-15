@@ -1,0 +1,181 @@
+#wrapper{
+
+    width:80%;
+    margin: 0 auto;
+}
+
+.flexcontainer{
+
+    display:flex;
+}
+
+.flex-item-1{
+
+
+}
+
+.flex-item-2{
+
+    
+}
+
+.flex-item-3{
+
+    
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .header-logo{
+    width:100px;
+    height:100px;
+    margin:5px;
+  }
+  
+  .header-text{
+    padding:.5em;
+    flex-shrink:0;
+  }
+  
+  .header-searchform{
+    flex-basis:50%;
+    flex-grow:1;
+    margin-right:1em;
+  }
+  
+  .header-searchbox{
+    width:100%;
+    height:3em;
+    padding:.5em;
+  }
+  
+  .header-account,.header-cart{
+    width:50px;
+    height:50px;
+    margin:5px;
+  }
+
+  .navbar-menu{
+    display:flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    position: relative;
+    background-color:rgb(214, 122, 214);
+  }
+  
+  .navbar-item{
+    display: block;
+    flex:0 0 auto;
+    margin:0;
+    padding:0;
+  }
+  
+  .navbar-link{
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    padding:1em;
+    background-color:purple;
+    color: white;
+  }
+  
+  .navbar-link:hover,.navbar-link:focus{
+    background-color:grey;
+  }
+  
+  .navbar-menu .navbar-menu{
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: absolute;
+    top:100%;
+    min-width:10em;
+  }
+  
+  .navbar-menu .navbar-menu .navbar-item{
+    flex: 0 0 3em;
+  }
+  
+  .navbar-menu .navbar-menu .navbar-link{
+    padding-left:2em;
+  }
+  
+  .navbar-item:hover > .navbar-menu,
+  .navbar-link:hover ~ .navbar-menu,
+  .navbar-item:focus-within > .navbar-menu,
+  .navbar-link:focus ~ .navbar-menu{
+    display: flex;
+  }
+  
+  .spotlight-img{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width:100%;
+    height:30vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow:0 2px 2px 2px black;
+  }
+  
+  .spotlight-text{
+    font-size:4em;
+    color:white;
+    text-align:center;
+    text-shadow: 4px 4px 4px black;
+  }
+
+  .flex-container-1{
+
+    display:flex;
+  }
+
+  .celebrity-img{
+    height:350px;
+    width:450px;
+    flex-flow:wrap;
+    align-self:center;
+    flex-direction:column;
+    background-repeat: no-repeat;
+    background-image:url("images/snoopPC.jpg");
+    margin-top: .3em;
+  }
+  
+  .celebrity-header{
+    padding:.5em;
+    flex-shrink:0;
+    color:white;
+    text-align:center;
+    font-size:2em;
+    text-shadow: 2px 2px 2px black;
+  }
+  
+  .celebrity-text{
+    font-size:1em;
+    flex-grow:0;
+    justify-content:center;
+    text-shadow: 2px 2px 2px white;
+    flex-wrap:wrap-reverse;
+    margin:8px;
+  }
+  
+  .celebrity-code{
+    font-size:2.5em;
+    margin:8px;
+  }
+  
+  .celebrity-quote{
+    font-size:1.5em;
+    margin:8px;
+  }
+  
