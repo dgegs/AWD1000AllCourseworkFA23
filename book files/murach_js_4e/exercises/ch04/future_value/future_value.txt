@@ -1,0 +1,55 @@
+"use strict";
+
+const $ = selector => document.querySelector(selector);
+
+const calculateFV = (investmentInput, rateInput, yearInput) => {
+
+    let futureValue = investmentInput;
+    for(let i = 1; i <= yearInput; ++i){
+      futureValue += (futureValue * rateInput) / 100;
+    }
+
+    return futureValue;
+  }
+
+  function processEntries(){
+    const investmentInput = parseFloat($('#investment').value)
+    const rateInput = parseFloat($('#rate').value)
+    const yearInput = parseInt($('#years').value)
+    const fvOutput = $('#future_value');
+
+    let error = "";
+
+
+    // error messages
+    if(!investmentInput || investmentInput <= 0 || investmentInput > 100000){
+      error = "Investment must be a number greater than zero and less than or equal to 100,000";
+      $('#investment').focus();
+    }
+    else if(!rateInput || rateInput <= 0 || rateInput > 15){
+      error = "Rate must be a number greater than zero and less than or equal to 15";
+      $('#rate').focus();
+    }
+    else if(!yearInput || yearInput <= 0 || yearInput > 50){
+      error = "Year must be a number greater than zero and less than or equal to 50";
+      $('#year').focus();
+    }
+    
+    // if no error print results if is error alert user of it
+    if(!error){
+      fvOutput.value = calculateFV(investmentInput, rateInput, yearInput).toFixed(2);
+    }
+    else{
+      alert(error);
+    }
+
+  }
+
+  window.onload = function () {
+    document.getElementById('calculate').onclick = processEntries;
+  }
+  /* This below is the same thing as the above code 
+  document.addEventListener('DOMContentLoaded', function(e){
+    document.getElementById('calculate').onclick = processEntries;
+  }
+  */
